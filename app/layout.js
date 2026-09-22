@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "AR/AP Manager",
+  title: "Rushda Trade | AR / AP Manager",
   description: "Customer receivables and supplier payables tracker",
 };
 
