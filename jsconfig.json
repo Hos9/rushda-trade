@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "https://rushda-trade.vercel.app",
     "paths": {
       "@/*": ["./*"]
     }
