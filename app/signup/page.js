@@ -43,10 +43,13 @@ export default function SignupPage() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
         <div className="card w-full max-w-sm p-8 text-center">
-          <h1 className="text-xl font-semibold text-slate-900">Check your email</h1>
+          <h1 className="text-xl font-semibold text-slate-900">
+            Check your email
+          </h1>
           <p className="mt-2 text-sm text-slate-600">
-            We sent a confirmation link to <span className="font-medium">{email}</span>.
-            Click it, then come back and sign in.
+            We sent a confirmation link to{" "}
+            <span className="font-medium">{email}</span>. Click it, then come
+            back and sign in.
           </p>
           <Link href="/login" className="btn mt-6 inline-flex">
             Go to sign in
@@ -60,15 +63,26 @@ export default function SignupPage() {
     <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
       <div className="card w-full max-w-sm p-8">
         <h1 className="text-xl font-semibold text-slate-900">Create account</h1>
-        <p className="mt-1 text-sm text-slate-500">AR / AP Manager</p>
+        <p className="mt-1 text-sm text-slate-500">
+          Rushda Trade | AR / AP Manager
+        </p>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">Name</label>
-            <input className="input" required value={name} onChange={(e) => setName(e.target.value)} />
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              Name
+            </label>
+            <input
+              className="input"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">Email</label>
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              Email
+            </label>
             <input
               className="input"
               type="email"
@@ -78,7 +92,9 @@ export default function SignupPage() {
             />
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">Password</label>
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              Password
+            </label>
             <input
               className="input"
               type="password"
@@ -96,7 +112,10 @@ export default function SignupPage() {
 
         <p className="mt-6 text-center text-sm text-slate-500">
           Already have an account?{" "}
-          <Link href="/login" className="font-medium text-brand-600 hover:underline">
+          <Link
+            href="/login"
+            className="font-medium text-brand-600 hover:underline"
+          >
             Sign in
           </Link>
         </p>

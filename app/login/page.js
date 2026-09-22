@@ -17,7 +17,10 @@ export default function LoginPage() {
     setError("");
     setLoading(true);
     const supabase = createClient();
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
     setLoading(false);
     if (error) {
       setError(error.message || "Could not sign in");
@@ -31,11 +34,15 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
       <div className="card w-full max-w-sm p-8">
         <h1 className="text-xl font-semibold text-slate-900">Sign in</h1>
-        <p className="mt-1 text-sm text-slate-500">AR / AP Manager</p>
+        <p className="mt-1 text-sm text-slate-500">
+          Rushda Trade | AR / AP Manager
+        </p>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">Email</label>
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              Email
+            </label>
             <input
               className="input"
               type="email"
@@ -45,7 +52,9 @@ export default function LoginPage() {
             />
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">Password</label>
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              Password
+            </label>
             <input
               className="input"
               type="password"
@@ -62,7 +71,10 @@ export default function LoginPage() {
 
         <p className="mt-6 text-center text-sm text-slate-500">
           Don't have an account?{" "}
-          <Link href="/signup" className="font-medium text-brand-600 hover:underline">
+          <Link
+            href="/signup"
+            className="font-medium text-brand-600 hover:underline"
+          >
             Create one
           </Link>
         </p>
